@@ -19,3 +19,10 @@ pear install mail_mime
     }
 
 
+    location ~ \.php$ {
+        root           /home/wwwroot/doc-root;
+        fastcgi_pass   unix:/run/php/php7.4-fpm.sock;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
