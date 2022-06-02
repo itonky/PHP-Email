@@ -2,7 +2,7 @@
 
 apt update
 
-apt install nginx php php-pear
+apt install nginx php php-fpm php-mysql php-pear
 
 pear install Auth_SASL 
 
